@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Local saves / exported progress (may contain personal learning records)
+math_quest_save_*.json
+*.save.json
+
+# Local backups & archives
+*_bak.html
+*.zip
+*.tgz
+
+# Editor / env
+.vscode/
+.idea/
+.env
+.env.*
+node_modules/

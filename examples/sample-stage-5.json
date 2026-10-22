@@ -1,0 +1,31 @@
+{
+  "stages": [
+    {
+      "id": 5,
+      "title": "Stage 5: Fruit Market",
+      "topicTag": "compare_more_fewer",
+      "questions": [
+        {
+          "id": "Q5_1",
+          "topicTag": "compare_more_fewer",
+          "prompt": "There are 5 apples 🍎 and 3 pears 🍐. How many more apples than pears?",
+          "visualType": "icons",
+          "visualData": ["🍎", "🍎", "🍎", "🍎", "🍎", "🍐", "🍐", "🍐"],
+          "options": ["2", "3", "8"],
+          "correctAnswer": "2",
+          "hint": "Match each pear with one apple. How many apples are left?"
+        },
+        {
+          "id": "Q5_2",
+          "topicTag": "cardinal_vs_ordinal",
+          "prompt": "From left to right: 🐻 🐼 🐨 🐯. What position is the koala in?",
+          "visualType": "icons",
+          "visualData": ["🐻", "🐼", "🐨", "🐯"],
+          "options": ["3", "3rd"],
+          "correctAnswer": "3rd",
+          "hint": "We are asking for the position, so use an ordinal number."
+        }
+      ]
+    }
+  ]
+}
