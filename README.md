@@ -1,5 +1,15 @@
 # 🏰 Misty Town: Math Dress-up Quest · 迷雾小镇数学换装闯关
 
+[![CI](https://github.com/TimzzZZZ666/misty-town-math-quest/actions/workflows/ci.yml/badge.svg)](https://github.com/TimzzZZZ666/misty-town-math-quest/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+**▶️ 在线试玩 / Play online：<https://timzzzzz666.github.io/misty-town-math-quest/>**（无需安装，浏览器直接打开；进度只保存在你自己的浏览器里）
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="开始界面 / Start screen" width="48%">
+  <img src="docs/screenshot-map.png" alt="35 关地图 / 35-level map" width="48%">
+</p>
+
 一个面向小学一年级、**全英文题干**的数学「错题订正 + 换装闯关」网页小游戏。
 孩子在地图上一关一关答题，答对攒积分，用积分在「魔法衣橱」里兑换新服装；家长可以一键导出学情报告，交给任意 AI 助手生成针对弱项的变式题，再导入游戏变成新关卡。
 
@@ -27,6 +37,10 @@
 - 界面主要针对 **iPad 横屏** 优化，桌面浏览器同样可用。
 
 ## 🚀 如何运行
+
+**最快方式：** 直接打开在线版 <https://timzzzzz666.github.io/misty-town-math-quest/>。
+
+本地运行：
 
 1. 下载或克隆本仓库：
    ```bash
@@ -71,6 +85,20 @@
 - 每题必须有 `prompt`、`options`（至少 2 个）和 `correctAnswer`，且答案必须是选项之一；
 - `visualType` 可选：`icons`、`lineup`、`pairing`、`venn_diagram`（需提供 `visualData.squareOnly / overlap / circleOnly`）、`card_train`。
 
+## 🧪 开发与检查
+
+仓库带有 GitHub Actions CI（`.github/workflows/ci.yml`），每次推送都会运行：
+
+- `scripts/check_repo.py`：按游戏的导入规则校验 `examples/*.json`，并对所有受跟踪文件做隐私扫描（本地绝对路径、手机号、邮箱、密钥样式字符串）。
+- `scripts/smoke_test.py`：用无头 Chrome 打开 `index.html`，确认没有 JS 报错、能进入地图，并能通过游戏自身逻辑导入示例题。
+
+本地运行：
+
+```bash
+python3 scripts/check_repo.py
+pip install playwright && python3 scripts/smoke_test.py   # 需要本机已安装 Chrome，可用 CHROME_PATH 指定
+```
+
 ## 🛠 技术栈
 
 - 原生 **HTML + CSS + JavaScript**（无框架、无构建步骤、无第三方依赖）
@@ -89,7 +117,7 @@
 - [ ] 把单文件拆分为源码 + 构建流程，便于维护
 - [ ] 更完善的移动端 / 不同屏幕尺寸适配
 
-欢迎提 Issue 交流建议。
+路线图的具体条目见 [Issues](https://github.com/TimzzZZZ666/misty-town-math-quest/issues)，欢迎提 Issue 交流建议。版本变更见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 🔒 隐私说明
 
@@ -105,6 +133,8 @@
 
 **Misty Town: Math Dress-up Quest** is a single-file, zero-dependency browser game for first-grade math practice with English-language questions. Kids clear stages on a 35-level map, earn points, and redeem outfits in a wardrobe. A parent zone exports a Markdown learning report (accuracy, weak topics, machine-readable JSON) that can be pasted into any AI assistant to generate follow-up questions, which can then be imported back into stages 5–35 as JSON. Progress is stored locally in `localStorage`; nothing is sent over the network.
 
-**Run:** open `index.html` in a modern browser (optimized for iPad landscape). Add `?debug=1` for debug mode.
+**Play online:** <https://timzzzzz666.github.io/misty-town-math-quest/>
+
+**Run locally:** open `index.html` in a modern browser (optimized for iPad landscape). Add `?debug=1` for debug mode.
 
 **Status:** early but playable; newly published and actively maintained by the author, who built it while learning AI-assisted development. Licensed under MIT.
