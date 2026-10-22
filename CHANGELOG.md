@@ -14,6 +14,6 @@
 - `examples/sample-stage-5.json` 示例题目文件。
 - README（中文 + English summary）、截图、MIT License、`.gitignore`。
 - GitHub Pages 在线试玩。
-- CI：示例 JSON 校验、隐私扫描、无头 Chrome 冒烟测试。
+- 检查脚本：`scripts/check_repo.py`（示例 JSON 校验 + 隐私扫描）、`scripts/smoke_test.py`（无头 Chrome 冒烟测试）。
 
 [0.1.0]: https://github.com/TimzzZZZ666/misty-town-math-quest/releases/tag/v0.1.0

@@ -1,6 +1,5 @@
 # 🏰 Misty Town: Math Dress-up Quest · 迷雾小镇数学换装闯关
 
-[![CI](https://github.com/TimzzZZZ666/misty-town-math-quest/actions/workflows/ci.yml/badge.svg)](https://github.com/TimzzZZZ666/misty-town-math-quest/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **▶️ 在线试玩 / Play online：<https://timzzzzz666.github.io/misty-town-math-quest/>**（无需安装，浏览器直接打开；进度只保存在你自己的浏览器里）
@@ -87,7 +86,7 @@
 
 ## 🧪 开发与检查
 
-仓库带有 GitHub Actions CI（`.github/workflows/ci.yml`），每次推送都会运行：
+仓库提供两个检查脚本（计划接入 GitHub Actions，每次推送自动运行）：
 
 - `scripts/check_repo.py`：按游戏的导入规则校验 `examples/*.json`，并对所有受跟踪文件做隐私扫描（本地绝对路径、手机号、邮箱、密钥样式字符串）。
 - `scripts/smoke_test.py`：用无头 Chrome 打开 `index.html`，确认没有 JS 报错、能进入地图，并能通过游戏自身逻辑导入示例题。
