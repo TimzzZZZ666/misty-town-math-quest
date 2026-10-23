@@ -1,60 +1,62 @@
-# 🏰 Misty Town: Math Dress-up Quest · 迷雾小镇数学换装闯关
+# Misty Town: Math Dress-up Quest · 迷雾小镇数学换装闯关
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**▶️ 在线试玩 / Play online：<https://timzzzzz666.github.io/misty-town-math-quest/>**（无需安装，浏览器直接打开；进度只保存在你自己的浏览器里）
+**▶️ Play online / 在线试玩：<https://timzzzzz666.github.io/misty-town-math-quest/>**  
+No install — opens in the browser. Progress stays in *your* browser only.  
+无需安装，浏览器直接打开；进度只保存在你自己的浏览器里。
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="开始界面 / Start screen" width="48%">
-  <img src="docs/screenshot-map.png" alt="35 关地图 / 35-level map" width="48%">
+  <img src="docs/screenshot.png" alt="Start screen / 开始界面" width="48%">
+  <img src="docs/screenshot-map.png" alt="35-level map / 35 关地图" width="48%">
 </p>
 
-一个面向小学一年级、**全英文题干**的数学「错题订正 + 换装闯关」网页小游戏。
-孩子在地图上一关一关答题，答对攒积分，用积分在「魔法衣橱」里兑换新服装；家长可以一键导出学情报告，交给任意 AI 助手生成针对弱项的变式题，再导入游戏变成新关卡。
+**English:** A single-file, zero-dependency browser game for **Grade 1 math practice with English question prompts**. Kids clear stages on a 35-level map, earn points, and redeem outfits in a wardrobe. Parents export a Markdown learning report, paste it into any AI assistant for follow-up questions, then import the JSON back as stages 5–35.
 
-> 本项目是作者在学习 AI 辅助开发过程中做的作品，刚刚公开发布，由作者持续维护中。
+**中文：** 面向小学一年级、**全英文题干**的数学「错题订正 + 换装闯关」网页小游戏。孩子在地图上一关一关答题，答对攒积分，在「魔法衣橱」兑换服装；家长一键导出学情报告，交给任意 AI 生成弱项变式题，再导入游戏变成新关卡。
 
 ---
 
-## ✨ 功能
+## Features · 功能
 
-- **35 关闯关地图**：手绘风格大地图，角色会沿路径行走到关卡节点；未解锁区域被迷雾覆盖，通关上一关才开放下一关。
-- **内置 4 个示例关卡**（英文题干，一年级数学）：
-  1. Bakery — 基数与序数（how many vs. which position）
-  2. Windmill — 一一对应，比多少（more / fewer）
-  3. Clock Tower — 韦恩图与交集
-  4. Cozy Cottage — 序列位置与移走卡片后的重新计数
-- **多种图示题型**：`icons`、`lineup`、`pairing`、`venn_diagram`、`card_train`。
-- **积分与衣橱**：答对得分、知识点掌握奖励、满星通关奖励；10 套整装皮肤（含带翅膀的分层动态皮肤）用积分兑换。
-- **答错有温和提示**，通关有烟花彩带庆祝；可开关的 Web Audio 八音盒背景音乐。
-- **家长区**：
-  - 「Copy for AI」一键复制 Markdown 学情诊断报告（正确率、待巩固知识点、机器可读 JSON、给出题 AI 的指令）。
-  - 导入题目 JSON，把新题放进第 5–35 关（前 4 关为内置题，不会被覆盖）。
-  - 导出 / 导入存档 `.json`，方便换设备。
-- **本地存档**：进度保存在浏览器 `localStorage`，多标签页同步，存档损坏时自动备份。
-- **零依赖单文件**：所有图片已内嵌在 `index.html` 中，不需要网络、不需要安装。
-- 界面主要针对 **iPad 横屏** 优化，桌面浏览器同样可用。
+- **35-level map / 35 关闯关地图** — hand-drawn style; character walks along the path; locked areas stay in mist until the previous stage is cleared.
+- **4 built-in stages / 内置 4 个示例关卡** (English prompts, Grade 1):
+  1. Bakery — cardinal vs. ordinal (how many vs. which position)
+  2. Windmill — one-to-one correspondence (more / fewer)
+  3. Clock Tower — Venn diagram / intersection
+  4. Cozy Cottage — sequence position and recount after removing a card
+- **Visual question types / 图示题型:** `icons`, `lineup`, `pairing`, `venn_diagram`, `card_train`
+- **Points & wardrobe / 积分与衣橱** — correct answers, mastery bonuses, full-star clears; 10 outfit skins (including layered winged skins) redeemable with points
+- **Gentle hints on miss; fireworks on clear;** optional Web Audio music-box BGM
+- **Parent zone / 家长区:**
+  - **Copy for AI** — Markdown learning report (accuracy, weak topics, machine-readable JSON, instructions for a question-writing AI)
+  - **Import questions** — JSON into stages 5–35 (stages 1–4 are built-in and never overwritten)
+  - **Export / import save** `.json` for device switches
+- **Local save / 本地存档** — `localStorage`, multi-tab sync, auto-backup on corruption
+- **Zero-dependency single file** — assets embedded in `index.html`; works offline
+- Optimized for **iPad landscape**; desktop browsers work too
 
-## 🚀 如何运行
+## Play & run locally · 试玩与本地运行
 
-**最快方式：** 直接打开在线版 <https://timzzzzz666.github.io/misty-town-math-quest/>。
+**Fastest:** open the live Pages link above.
 
-本地运行：
+Local:
 
-1. 下载或克隆本仓库：
-   ```bash
-   git clone https://github.com/TimzzZZZ666/misty-town-math-quest.git
-   ```
-2. 用浏览器（Chrome / Safari / Edge）直接打开 `index.html` 即可。
-   - iPad：可通过 AirDrop / 文件 App 把 `index.html` 放到设备上，用 Safari 打开。
-   - 也可以用任意静态服务器托管，例如 `python3 -m http.server`，或开启 GitHub Pages。
-3. 调试模式：在地址后加 `?debug=1`，会出现积分调试按钮，且使用独立的调试存档，不影响正式进度。
+```bash
+git clone https://github.com/TimzzZZZ666/misty-town-math-quest.git
+cd misty-town-math-quest
+# open index.html in Chrome / Safari / Edge
+# or: python3 -m http.server
+```
 
-> 注意：以 `file://` 方式打开时，部分浏览器按完整文件路径隔离 `localStorage`。换了文件位置或文件名，旧进度不会自动带过去——请先在家长区导出存档，再在新位置导入。
+- iPad: AirDrop / Files app → open `index.html` in Safari.
+- Debug mode: append `?debug=1` for point-debug controls and a separate debug save (does not touch normal progress).
 
-## 📝 导入新题
+> **Note / 注意:** Opening via `file://` isolates `localStorage` by full path. If you move or rename the file, export the save from the parent zone first, then import it in the new location.
 
-在家长区点击「导入错题」，粘贴 JSON 或选择 `.json` 文件。格式示例见 [`examples/sample-stage-5.json`](examples/sample-stage-5.json)：
+## Import questions · 导入新题
+
+In the parent zone, click **导入错题 / Import**, paste JSON or pick a `.json` file. See [`examples/sample-stage-5.json`](examples/sample-stage-5.json):
 
 ```json
 {
@@ -79,61 +81,84 @@
 }
 ```
 
-规则：
-- 关卡号只能是 5–35；
-- 每题必须有 `prompt`、`options`（至少 2 个）和 `correctAnswer`，且答案必须是选项之一；
-- `visualType` 可选：`icons`、`lineup`、`pairing`、`venn_diagram`（需提供 `visualData.squareOnly / overlap / circleOnly`）、`card_train`。
+Rules:
 
-## 🧪 开发与检查
+- Stage `id` must be **5–35**
+- Each question needs `prompt`, `options` (≥ 2), and `correctAnswer` (must be one of the options)
+- `visualType` (optional): `icons` | `lineup` | `pairing` | `venn_diagram` (needs `visualData.squareOnly` / `overlap` / `circleOnly`) | `card_train`
 
-仓库提供两个检查脚本（计划接入 GitHub Actions，每次推送自动运行）：
+## Contribute · 参与贡献
 
-- `scripts/check_repo.py`：按游戏的导入规则校验 `examples/*.json`，并对所有受跟踪文件做隐私扫描（本地绝对路径、手机号、邮箱、密钥样式字符串）。
-- `scripts/smoke_test.py`：用无头 Chrome 打开 `index.html`，确认没有 JS 报错、能进入地图，并能通过游戏自身逻辑导入示例题。
+PRs and Issues welcome. Useful entry points:
 
-本地运行：
+- Open Issues tagged [`good first issue`](https://github.com/TimzzZZZ666/misty-town-math-quest/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/TimzzZZZ666/misty-town-math-quest/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- Before opening a PR, run:
 
 ```bash
 python3 scripts/check_repo.py
-pip install playwright && python3 scripts/smoke_test.py   # 需要本机已安装 Chrome，可用 CHROME_PATH 指定
 ```
 
-## 🛠 技术栈
+- Keep saves and learning reports out of the repo (`.gitignore` already ignores `math_quest_save_*.json`)
+- Roadmap work is tracked as Issues labeled `roadmap` — comment on an Issue before large changes
 
-- 原生 **HTML + CSS + JavaScript**（无框架、无构建步骤、无第三方依赖）
-- **Canvas** 绘制烟花与彩带动画，**SVG** 绘制开场城堡与地图路线
-- **Web Audio API** 合成背景音乐与音效
-- **localStorage** 本地持久化
-- 美术素材为 AI 生成的黏土风插画，以 WebP Base64 内嵌
+## Dev checks · 开发与检查
 
-## 📌 项目状态与路线图
+- `scripts/check_repo.py` — validates `examples/*.json` against import rules; privacy-scans tracked text files (local absolute paths, phone numbers, emails, secret-like tokens)
+- `scripts/smoke_test.py` — headless Chrome: no JS errors, can reach the map, can import the sample stage via game logic
 
-当前状态：**可玩的早期版本**，刚刚公开，作者在持续迭代。
+```bash
+python3 scripts/check_repo.py
+pip install playwright && python3 scripts/smoke_test.py   # needs Chrome; override with CHROME_PATH
+```
 
-计划中（可能调整）：
-- [ ] 更多内置关卡与题型
-- [ ] 新一批服装皮肤（已有原型设计，尚未接入游戏）
-- [ ] 把单文件拆分为源码 + 构建流程，便于维护
-- [ ] 更完善的移动端 / 不同屏幕尺寸适配
+GitHub Actions wiring for these scripts is on the roadmap (see below).
 
-路线图的具体条目见 [Issues](https://github.com/TimzzZZZ666/misty-town-math-quest/issues)，欢迎提 Issue 交流建议。版本变更见 [CHANGELOG.md](CHANGELOG.md)。
+## Tech stack · 技术栈
 
-## 🔒 隐私说明
+- Vanilla **HTML + CSS + JavaScript** (no framework, no build step, no third-party deps)
+- **Canvas** fireworks / confetti; **SVG** intro castle & map path
+- **Web Audio API** BGM / SFX
+- **localStorage** persistence
+- Clay-style art (AI-assisted), embedded as WebP Base64
 
-游戏不联网、不收集任何数据，所有进度只保存在你自己的浏览器里。导出的存档和学情报告可能包含孩子的答题记录，请自行妥善保管，不要提交到公开仓库（`.gitignore` 已默认忽略 `math_quest_save_*.json`）。
+## Status & roadmap · 项目状态与路线图
 
-## 📄 License
+**Status:** early but playable — public `v0.1.0`, actively maintained.  
+**当前状态：** 可玩的早期版本（`v0.1.0` 已公开发布），作者持续维护。
+
+See [CHANGELOG.md](CHANGELOG.md) and [Issues](https://github.com/TimzzZZZ666/misty-town-math-quest/issues).
+
+### Done · 已完成
+
+- Single-file game: 35-level map, 4 built-in Grade-1 English stages, 5 visual types
+- Points + wardrobe (10 outfits, including layered winged skins)
+- Parent zone: AI learning report, JSON import (stages 5–35), save export/import
+- Local `localStorage` save, multi-tab sync, corruption backup; `?debug=1`
+- `examples/sample-stage-5.json`, MIT license, GitHub Pages live demo
+- Repo check scripts: `check_repo.py`, `smoke_test.py`
+
+### In progress · 进行中
+
+- Docs / OSS storefront polish (this pass): clearer bilingual README, executable roadmap
+- Wire `check_repo.py` / `smoke_test.py` into GitHub Actions on push
+
+### Next · 下一步
+
+| Item | Issue |
+|------|-------|
+| Split `index.html` into modules + build that still emits one offline file | [#1](https://github.com/TimzzZZZ666/misty-town-math-quest/issues/1) |
+| Parent-facing visual level editor (stages 5–35 without hand-written JSON) | [#2](https://github.com/TimzzZZZ666/misty-town-math-quest/issues/2) |
+| More visual types: number line, ten frame, clock, shapes, free input | [#3](https://github.com/TimzzZZZ666/misty-town-math-quest/issues/3) |
+| i18n: extract UI strings; zh-CN / English interface (question prompts stay as authored) | [#4](https://github.com/TimzzZZZ666/misty-town-math-quest/issues/4) |
+
+Ideas welcome as new Issues. Prefer linking work to an Issue before large PRs.
+
+## Privacy · 隐私说明
+
+The game does not phone home and collects no data; progress stays in your browser. Exported saves and learning reports may contain a child's answer history — keep them private; do not commit them (`.gitignore` already ignores `math_quest_save_*.json`).
+
+游戏不联网、不收集数据；导出的存档与学情报告请自行保管，勿提交到公开仓库。
+
+## License · 许可
 
 [MIT](LICENSE)
-
----
-
-## English Summary
-
-**Misty Town: Math Dress-up Quest** is a single-file, zero-dependency browser game for first-grade math practice with English-language questions. Kids clear stages on a 35-level map, earn points, and redeem outfits in a wardrobe. A parent zone exports a Markdown learning report (accuracy, weak topics, machine-readable JSON) that can be pasted into any AI assistant to generate follow-up questions, which can then be imported back into stages 5–35 as JSON. Progress is stored locally in `localStorage`; nothing is sent over the network.
-
-**Play online:** <https://timzzzzz666.github.io/misty-town-math-quest/>
-
-**Run locally:** open `index.html` in a modern browser (optimized for iPad landscape). Add `?debug=1` for debug mode.
-
-**Status:** early but playable; newly published and actively maintained by the author, who built it while learning AI-assisted development. Licensed under MIT.
